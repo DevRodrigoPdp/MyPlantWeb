@@ -146,7 +146,7 @@ nav ul{
 /*WHY US*/
 .why-us{
     background-color: #ccd5ae;
-    padding:50px 0;
+    padding:80px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,20 +173,22 @@ nav ul{
 .why-us-box-btn {
     padding: 10px 20px;
     font-size: 1em;
-    color:black;
+    color: black;
     border: solid 1px black;
     cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 .why-us-box-btn:hover {
     transform: translateY(-3px);
 }
 .why-us-img{
     position: absolute;
-    right: 220px; 
+    right: 420px; 
     top: 20px; 
 }
 .why-us-img img{
-    width: 180px; /* Ajusta el tamaño de la imagen */
+    width: 220px;
     height: auto;
 }
 /*FOOTER*/
