@@ -6,95 +6,99 @@ html, body {
     background-color: white;
     font-family: 'Assistant', sans-serif;
 }
-
-.btn {
-    padding: 5px;
+.btn{
+    padding:5px  ;
     border-radius: 5px;
     border: none;
     color: white;
-    background-color: green;
+    background-color:green;
     font-family: inherit;
     font-weight: bold;
 }
-
-.cta {
+.cta{
     font-weight: bold;
 }
-
-#main-logo {
-    width: 80px;
+#main-logo{
+    width: 100px;
     border-radius: 50%;
-    border: white;
+    border:white;
 }
-
-/* Header */
-header {
+header{
     display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: #ccd5ae;
-    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    padding-left: 250px;
 }
-
-header p {
-    font-size: 24px;
-    margin: 10px 0;
-    text-align: center;
+header p{ 
+    margin-left: 20px;
+    margin-bottom: 30px;
+    font-size: 30px;
 }
-
-ul {
+ul{
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 15px;
 }
-
-.sub-header {
+header p{
+    margin-top: 40px;
+    margin-right: 250px;
+}
+.sub-header{
     background-color: #e9edc9;
     display: flex;
     justify-content: center;
     padding: 10px;
 }
-
-.ofertas p {
+nav{
+    display: flex;
+}
+nav ul{
+    display: flex; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    justify-content: center; 
+    gap: 20px; 
+}
+.ofertas p{
     font-weight: bold;
     text-align: center;
 }
-
-/* Contenedor de la Imagen Principal */
-.image-container {
+/*CONTENEDOR IMAGEN PRINCIPAL*/
+.image-container{
     width: 100%;
     height: 300px;
     overflow: hidden;
 }
-
-.image-container img {
+.image-container img{
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
     object-position: center;
 }
-
-/* Caja de Opciones */
+/*CAJA DE OPCIONES ENCIMA DEL CONTAINER*/
 .overlay-box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -90%);
-    background-color: #93A08C;
+    background-color:#93A08C; /* Fondo oscuro semi-transparente */
     color: white;
     padding: 15px;
     text-align: center;
 }
-
+.overlay-box h3 {
+    margin-bottom: 20px;
+    font-size: 1em;
+}
 .overlay-box .options {
     display: flex;
     gap: 10px;
     justify-content: center;
 }
-
 .overlay-box button {
     padding: 10px 15px;
     background-color: #93A08C;
@@ -103,128 +107,95 @@ ul {
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-
-.overlay-box button:hover {
+.overlay-box button:hover{
     transform: translateY(-3px);
 }
-
-/* Tarjetas de Categorías */
-.find-your-plants h2 {
-    text-align: center;
-    margin-bottom: 20px;
+/*CARDS DE CATEGORIAS*/
+.find-your-plants h2{
+    margin-left: 70px;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
-
-.category-cards {
+.category-cards{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    padding: 0 10px;
 }
-
+.card p{
+    margin-top: 20px;
+    font-size: 1em;
+    text-align: center;
+}
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    max-width: 280px;
+    width: 300px;
     border-radius: 8px;
 }
-
-.category-cards img {
+.category-cards img{
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
 }
-
-.card p {
-    margin-top: 10px;
-    font-size: 1em;
-    text-align: center;
-}
-
 .card:hover img {
     transform: scale(1.05);
 }
-
-/* Sección "Why Us" */
-.why-us {
+/*WHY US*/
+.why-us{
     background-color: #ccd5ae;
-    padding: 40px 20px;
+    padding:80px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    text-align: center;
 }
-
-.why-us-box {
+.why-us-box{
     background-color: white;
-    padding: 20px;
-    max-width: 500px;
+    padding: 10px 20px;
+    max-width: 600px;
+    padding-bottom: 30px;
     z-index: 1;
 }
-
-.why-us-box h2 {
-    font-size: 1.8em;
-    color: #556b2f;
+.why-us-box h2{
+    font-size:2em;
+    color: #556b2f; 
     margin-bottom: 15px;
 }
-
 .why-us-box p {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #333333;
-    margin-bottom: 20px;
-}
+    margin-bottom: 30px;
 
+}
 .why-us-box-btn {
     padding: 10px 20px;
     font-size: 1em;
     color: black;
     border: solid 1px black;
     cursor: pointer;
+    position: relative;
     transition: transform 0.3s ease;
 }
-
 .why-us-box-btn:hover {
     transform: translateY(-3px);
 }
-
-.why-us-img {
+.why-us-img{
     position: absolute;
-    right: -20px;
-    top: 10px;
-    z-index: 0;
-    width: 180px;
+    right: 420rem; 
+    top: 20rem; 
+}
+.why-us-img img{
+    width: 220px;
     height: auto;
 }
-
-/* Footer */
-footer {
+/*FOOTER*/
+footer{
     background-color: #2a2a2a;
     color: #f1f1f1;
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0;
     font-size: 0.9em;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    #main-logo {
-        width: 60px;
-    }
-
-    header p {
-        font-size: 20px;
-    }
-
-    .why-us {
-        padding: 20px;
-    }
-
-    .why-us-img {
-        display: none;
-    }
 }
