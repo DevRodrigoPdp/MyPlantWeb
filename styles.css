@@ -107,7 +107,7 @@ nav ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -90%);
+    transform: translate(-50%, -50%);
     background-color: #93A08C;
     color: white;
     padding: 15px;
