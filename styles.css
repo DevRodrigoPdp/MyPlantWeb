@@ -1,3 +1,4 @@
+/* General */
 html, body {
     height: 100%;
     margin: 0;
@@ -6,99 +7,124 @@ html, body {
     background-color: white;
     font-family: 'Assistant', sans-serif;
 }
-.btn{
-    padding:5px  ;
+
+/* Botones generales */
+.btn {
+    padding: 5px;
     border-radius: 5px;
     border: none;
     color: white;
-    background-color:green;
+    background-color: green;
     font-family: inherit;
     font-weight: bold;
 }
-.cta{
+
+/* Estilo CTA (Call to Action) */
+.cta {
     font-weight: bold;
 }
-#main-logo{
+
+/* Logo principal */
+#main-logo {
     width: 100px;
     border-radius: 50%;
-    border:white;
+    border: white;
 }
-header{
+
+/* Header */
+header {
     display: flex;
     background-color: #ccd5ae;
     justify-content: center;
     align-items: center;
     padding-left: 250px;
 }
-header p{ 
+
+header p { 
     margin-left: 20px;
     margin-bottom: 30px;
     font-size: 30px;
 }
-ul{
+
+/* Lista de navegación */
+ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
     gap: 15px;
 }
-header p{
+
+header p {
     margin-top: 40px;
     margin-right: 250px;
 }
-.sub-header{
+
+/* Subheader */
+.sub-header {
     background-color: #e9edc9;
     display: flex;
     justify-content: center;
     padding: 10px;
 }
-nav{
+
+/* Navegación */
+nav {
     display: flex;
 }
-nav ul{
-    display: flex; 
-    list-style: none; 
-    padding: 0; 
-    margin: 0; 
-    justify-content: center; 
-    gap: 20px; 
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    gap: 20px;
 }
-.ofertas p{
+
+/* Ofertas */
+.ofertas p {
     font-weight: bold;
     text-align: center;
 }
-/*CONTENEDOR IMAGEN PRINCIPAL*/
-.image-container{
+
+/* Contenedor de imagen principal */
+.image-container {
     width: 100%;
     height: 300px;
     overflow: hidden;
 }
-.image-container img{
+
+.image-container img {
     width: 100%;
     height: 300px;
     object-fit: cover;
     object-position: center;
 }
-/*CAJA DE OPCIONES ENCIMA DEL CONTAINER*/
+
+/* Caja de opciones superpuesta */
 .overlay-box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -90%);
-    background-color:#93A08C; /* Fondo oscuro semi-transparente */
+    background-color: #93A08C;
     color: white;
     padding: 15px;
     text-align: center;
 }
+
 .overlay-box h3 {
     margin-bottom: 20px;
     font-size: 1em;
 }
+
 .overlay-box .options {
     display: flex;
     gap: 10px;
     justify-content: center;
 }
+
 .overlay-box button {
     padding: 10px 15px;
     background-color: #93A08C;
@@ -107,92 +133,243 @@ nav ul{
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-.overlay-box button:hover{
+
+.overlay-box button:hover {
     transform: translateY(-3px);
 }
-/*CARDS DE CATEGORIAS*/
-.find-your-plants h2{
+
+/* Categorías de tarjetas */
+.find-your-plants h2 {
     margin-left: 70px;
     margin-bottom: 40px;
     margin-top: 40px;
 }
-.category-cards{
+
+.category-cards {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
-.card p{
+
+.card p {
     margin-top: 20px;
     font-size: 1em;
     text-align: center;
 }
+
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 300px;
-    border-radius: 8px;
 }
-.category-cards img{
+
+.category-cards img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
 }
+
 .card:hover img {
     transform: scale(1.05);
 }
-/*WHY US*/
-.why-us{
+
+/* Sección "Why Us" */
+.why-us {
     background-color: #ccd5ae;
-    padding:80px 0;
+    padding: 80px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
-.why-us-box{
+
+.why-us-box {
     background-color: white;
-    padding: 10px 20px;
+    padding: 20px 40px;
     max-width: 600px;
     padding-bottom: 30px;
     z-index: 1;
 }
-.why-us-box h2{
-    font-size:2em;
+
+.why-us-box h2 {
+    font-size: 2em;
     color: #556b2f; 
     margin-bottom: 15px;
 }
+
 .why-us-box p {
     font-size: 1.1em;
     color: #333333;
     margin-bottom: 30px;
-
 }
+
 .why-us-box-btn {
     padding: 10px 20px;
     font-size: 1em;
     color: black;
     border: solid 1px black;
     cursor: pointer;
-    position: relative;
     transition: transform 0.3s ease;
 }
+
 .why-us-box-btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
-.why-us-img{
+
+.why-us-img {
     position: absolute;
     right: 420rem; 
     top: 20rem; 
 }
-.why-us-img img{
+
+.why-us-img img {
     width: 220px;
     height: auto;
 }
-/*FOOTER*/
-footer{
+
+/* Noticias */
+.news h2 {
+    margin-left: 70px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.news-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.new-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.new-card:hover {
+    transform: translateY(-5px);
+}
+
+.new-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.new-card:hover img {
+    transform: scale(1.05);
+}
+
+.new-card .title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.new-card p {
+    font-size: 1em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.view-all-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.view-all {
+    background: none;
+    color: #93A08C;
+    font-style: italic; 
+    border: none;
+    cursor: pointer;
+    font-weight: normal;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.view-all:hover {
+    color: #556b2f;
+    text-decoration: underline;
+}
+
+/* Suscripciones */
+.subscribe-container {
+    background-color: #93A08C;
+    color: white;
+    padding: 40px 0px;
+    text-align: center;
+}
+
+.subscribe-container h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.subscribe-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-wrapper input {
+    flex: 1; 
+    padding: 10px 15px;
+    font-size: 1em;
+    border: none;
+    outline: none;
+}
+
+.input-wrapper button {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.input-wrapper button svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+}
+
+.input-wrapper button:hover {
+    background-color: white;
+}
+
+/* Footer */
+footer {
     background-color: #2a2a2a;
     color: #f1f1f1;
     text-align: center;
