@@ -90,6 +90,7 @@ nav ul {
 
 /* Contenedor de imagen principal */
 .image-container {
+    position: relative;
     width: 100%;
     height: 300px;
     overflow: hidden;
