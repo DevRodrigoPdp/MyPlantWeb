@@ -34,53 +34,42 @@ html, body {
 /* Header */
 header {
     display: flex;
-    background-color: #ccd5ae;
-    justify-content: center;
-    align-items: center;
-    padding-left: 250px;
-}
-
-header p { 
-    margin-left: 20px;
-    margin-bottom: 30px;
-    font-size: 30px;
-}
-
-/* Lista de navegación */
-ul {
-    list-style: none;
-    display: flex;
     justify-content: space-between;
-    margin-top: 40px;
-    gap: 15px;
+    align-items: center;
+    padding: 16px 40px; /* Añadido padding a los lados para separar los elementos */
+    background-color: #ccd5ae;
+
 }
 
-header p {
-    margin-top: 40px;
-    margin-right: 250px;
-}
-
-/* Subheader */
-.sub-header {
-    background-color: #e9edc9;
+.logo-container {
     display: flex;
-    justify-content: center;
-    padding: 10px;
+    align-items: center;
 }
 
-/* Navegación */
-nav {
-    display: flex;
+#main-logo {
+    width: 100px;
+    margin-right: 10px;
+    margin-left: 120px;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    padding: 0;
     margin: 0;
-    justify-content: center;
-    gap: 20px;
+    gap: 0.5px;
+    padding: 0;
 }
+
+nav ul li {
+    margin-left: 120px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    text-decoration: underline;
+}
+
 
 /* Ofertas */
 .ofertas p {
@@ -141,7 +130,7 @@ nav ul {
 
 /* Categorías de tarjetas */
 .find-your-plants h2 {
-    margin-left: 70px;
+    margin-left: 225px;
     margin-bottom: 40px;
     margin-top: 40px;
 }
@@ -188,7 +177,6 @@ nav ul {
 }
 
 .why-us-box {
-    background-color: white;
     padding: 20px 40px;
     max-width: 600px;
     padding-bottom: 30px;
@@ -197,21 +185,21 @@ nav ul {
 
 .why-us-box h2 {
     font-size: 2em;
-    color: #556b2f; 
+    color:white; 
     margin-bottom: 15px;
 }
 
 .why-us-box p {
     font-size: 1.1em;
-    color: #333333;
+    color:white;
     margin-bottom: 30px;
 }
 
 .why-us-box-btn {
     padding: 10px 20px;
     font-size: 1em;
-    color: black;
-    border: solid 1px black;
+    color: white;
+    border: solid 1px white;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -232,73 +220,117 @@ nav ul {
 }
 
 /* Noticias */
-.news h2 {
-    margin-left: 70px;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    text-align: left;
-}
-
 .news-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0; /* Intenta reducir el padding */
+}
+.news-container h2{
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Esto ya está bien para hacer las cards responsivas */
+    gap: 24px;
+    justify-content: center; /* Esto asegura que las cards se alineen horizontalmente al centro */
 }
 
-.new-card {
-    display: flex;
-    flex-direction: column;
+.new {
+    --img-scale: 1.001;
+    --title-color: black;
+    --link-icon-translate: -20px;
+    --link-icon-opacity: 0;
+    position: relative;
+    border-radius: 16px;
+    box-shadow: none;
+    background: #fff;
+    transform-origin: center;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+  }
+  
+  .new a::after {
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    cursor: pointer;
+    content: "";
+  }
+  
+  /* basic article elements styling */
+  .new h2 {
+    margin: 0 0 18px 0;
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.9rem;
+    letter-spacing: 0.06em;
+    transition: color 0.3s ease-out;
+  }
+  
+  figure {
+    margin: 0;
+    padding: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  
+  .new img {
+    max-width: 100%;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .new-body {
+    padding: 24px;
+  }
+  
+  .new a {
+    display: inline-flex;
     align-items: center;
-    width: 300px;
-    transition: transform 0.3s ease;
-}
+    text-decoration: none;
+    color: #28666e;
+  }
+  
+  .new a:focus {
+    outline: 1px dotted #28666e;
+  }
+  
+  .new a .icon {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    transform: translateX(var(--link-icon-translate));
+    opacity: var(--link-icon-opacity);
+    transition: all 0.3s;
+  }
+  
+  /* using the has() relational pseudo selector to update our custom properties */
+  .new:has(:hover, :focus) {
+    --img-scale: 1.1;
+    --title-color: #28666e;
+    --link-icon-translate: 0;
+    --link-icon-opacity: 1;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+  
 
-.new-card:hover {
-    transform: translateY(-5px);
-}
-
-.new-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.new-card:hover img {
-    transform: scale(1.05);
-}
-
-.new-card .title {
-    font-weight: bold;
-    font-size: 1.1em;
-    margin: 10px 0;
-    text-align: center;
-}
-
-.new-card p {
-    font-size: 1em;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.view-all-container {
+  .view-all-container {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Ya está centrado horizontalmente */
     align-items: center;
-    margin-top: 20px;
     width: 100%;
 }
 
 .view-all {
     background: none;
     color: #93A08C;
-    font-style: italic; 
+    font-style: italic;
     border: none;
     cursor: pointer;
     font-weight: normal;
-    padding-top: 50px;
-    padding-bottom: 30px;
+    padding: 15px 30px; /* Ajusta el padding para reducir el espacio */
 }
 
 .view-all:hover {
